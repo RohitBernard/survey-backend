@@ -13,7 +13,7 @@ router.use(bodyParser.urlencoded({ extended: true }));
 //form-urlencoded
 
 router.post('/', function(req, res){
-    console.log('createSurvey request recieved')
+    console.log('createSurvey request recieved');
     var out={"success":"",
             "error":"",
             "data":""};
@@ -57,5 +57,5 @@ router.post('/', function(req, res){
     });
 });
 
-//export this router to use in our index.js
+//export this router to use in our app.js
 module.exports = router;
