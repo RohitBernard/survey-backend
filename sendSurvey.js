@@ -12,7 +12,7 @@ router.get('/:fID',function(req,res){
         if (err) throw err;
         var db = client.db('survey_project');
         var query={"formID":req.params.fID};
-        db.collection("surveys").find(query).project({"_id":0}).toArray(function(err,result){
+        db.collection("surveys").find(query).project({"_id":0,"answers":0}).toArray(function(err,result){
             //console.log(result);
             if(err) {
                 out.error=err;
